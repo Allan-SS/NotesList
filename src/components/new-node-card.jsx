@@ -81,7 +81,7 @@ export const NewNodeCard = ({ onNoteCreated }) => {
   
   return (
     <Dialog.Root>
-      <Dialog.Trigger className="flex flex-col text-left rounded-md p-5 gap-3 w-full bg-slate-700 overflow-hidden outline-none hover:ring-2 hover:ring-slate-600 focus-visible:ring-2 focus-visible:ring-indigo-400">
+      <Dialog.Trigger className="flex flex-col duration-500 text-left rounded-md p-5 gap-3 w-full bg-slate-700 overflow-hidden outline-none hover:ring-2 hover:ring-slate-600 focus-visible:ring-2 focus-visible:ring-indigo-400">
         <span className="text-sm font-medium text-slate-200">
           Adicionar nota
         </span>
@@ -94,9 +94,12 @@ export const NewNodeCard = ({ onNoteCreated }) => {
         <Dialog.Overlay className="bg-black/50 fixed inset-0" />
         <Dialog.Content className="fixed overflow-hidden inset-0 md:inset-auto md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:max-w-[40rem] md:h-[60vh] w-full bg-slate-700 md:rounded-md flex flex-col outline-none">
           <Dialog.Close className="absolute right-0 top-0 p-1.5 text-slate-400 bg-slate-800 hover:text-slate-100">
-            <X 
-            onClick={() => {setShouldShowOnboarding(true), setContent('')}}
-            className="size-5 " />
+            <X
+              onClick={() => {
+                setShouldShowOnboarding(true), setContent("");
+              }}
+              className="size-5 "
+            />
           </Dialog.Close>
 
           <form className="flex-1 flex flex-col">
